@@ -7,28 +7,29 @@ public class Siakad11 {
 
         // Deklarasi Variabel
         String nama,nim;
-        char kelas;
+        String kelas;
         byte absen;
-        double nilaiKuis,nilaiTugas,nilaiUjian,nilaiAkhir;
+        double nilaiKuis,nilaiTugas,nilaiUts,nilaiUas,nilaiAkhir;
 
         System.out.print("Masukkan nama: ");
         nama=sc.nextLine();
         System.out.print("Masukkan NIM: ");
         nim=sc.nextLine();
         System.out.print("Masukkan Kelas: ");
-        kelas=sc.nextLine().charAt(0);
+        kelas=sc.nextLine();
         System.out.print("Masukkan nomor absen: ");
         absen=sc.nextByte();
-
 
         System.out.print("Masukkan nilai kuis: ");
         nilaiKuis=sc.nextDouble();
         System.out.print("Masukkan nilai tugas: ");
         nilaiTugas=sc.nextDouble();
-        System.out.print("Masukkan nilai ujian: ");
-        nilaiUjian=sc.nextDouble();
+        System.out.print("Masukkan nilai UTS: ");
+        nilaiUts=sc.nextDouble();
+        System.out.print("Masukkan nilai UAS: ");
+        nilaiUas=sc.nextDouble();
 
-        nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+        nilaiAkhir = (nilaiKuis * 20/100) + (nilaiTugas * 15/100) + (nilaiUts * 30/100) + (nilaiUas * 35/100);
 
         System.out.println("Nama: "+nama+" NIM: "+nim);
         System.out.println("Kelas: "+kelas+" Absen: "+absen);
